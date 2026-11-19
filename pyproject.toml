@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "event-venue-hall-booking-schedule-cli-lite"
+version = "0.1.0"
+description = "Zero-dependency Python 3.9+ SQLite CLI for event venue & conference hall hourly booking."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "ExternalHunter" }]
+
+[project.scripts]
+venue-cli = "venue_cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["venue_cli*"]
